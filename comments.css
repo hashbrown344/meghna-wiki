@@ -1,0 +1,194 @@
+.comments-section {
+  width: 100%;
+  margin-top: 6%;
+}
+
+.comment-form {
+  width: 100%;
+  padding: 2.5%;
+  background-color: #efeed8;
+  border: 1px solid #d3b428;
+}
+
+.comment-field {
+  margin-bottom: 2%;
+}
+
+.comment-field label {
+  display: block;
+  margin-bottom: 0.7%;
+  font-weight: 600;
+}
+
+.optional-label {
+  color: #b74e25;
+  font-size: 0.85em;
+  font-weight: 400;
+}
+
+.comment-field input,
+.comment-field textarea {
+  display: block;
+  width: 100%;
+  padding: 1.4%;
+  border: 1px solid #bdae7e;
+  background-color: #ebe8dc;
+  color: #29242e;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.comment-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.comment-field input:focus,
+.comment-field textarea:focus {
+  outline: 2px solid #c3664f;
+  outline-offset: 1px;
+  border-color: transparent;
+}
+
+.comment-form-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2%;
+}
+
+#comment-character-count {
+  color: #b74e25;
+  font-size: 0.9rem;
+}
+
+#comment-submit-button {
+  padding: 1.2% 2.5%;
+  border: 0;
+  background-color: #a1290b;
+  color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#comment-submit-button:hover {
+  background-color: #621705;
+}
+
+#comment-submit-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+#comment-form-message {
+  min-height: 1.5em;
+  margin: 1.5% 0 0;
+}
+
+.comments-list {
+  margin-top: 3%;
+}
+
+.comment-card {
+  position: relative;
+  margin-bottom: 2%;
+  padding: 2.2% 5% 2.2% 2.2%;
+  background-color: #eee894;
+  border: 1px solid #c3664f;
+  border-left: 0.4rem solid #d2814e;
+}
+
+.comment-header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 1%;
+  margin-bottom: 1%;
+}
+
+.comment-author {
+  font-weight: 700;
+}
+
+.comment-date {
+  color: #b74e25;
+  font-size: 0.82rem;
+}
+
+.comment-text {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* DELETE CROSS */
+.comment-delete-button {
+  position: absolute;
+  top: 7%;
+  right: 1.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #526678;
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.comment-delete-button:hover {
+  background-color: #eaeddc;
+  color: #9b2f2f;
+}
+
+.comment-delete-button:disabled {
+  cursor: wait;
+  opacity: 0.45;
+}
+
+.comments-status {
+  padding: 2%;
+  background-color: #ebe8dc;
+  border: 1px solid #d7a05c;
+  color: #aea785;
+}
+
+@media (max-width: 750px) {
+  .comment-form {
+    padding: 4%;
+  }
+
+  .comment-field {
+    margin-bottom: 4%;
+  }
+
+  .comment-field input,
+  .comment-field textarea {
+    padding: 3%;
+  }
+
+  .comment-form-bottom {
+    align-items: flex-end;
+  }
+
+  #comment-submit-button {
+    padding: 3% 5%;
+  }
+
+  .comment-card {
+    padding: 4% 13% 4% 4%;
+  }
+
+  .comment-delete-button {
+    top: 4%;
+    right: 3%;
+  }
+}

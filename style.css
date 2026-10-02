@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px !important;
+
+  background-image: url("background-collage.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #cf7843;
+}
+
+/* OUTER BACKGROUND AREA */
+.page-bg {
+  width: 100%;
+  min-height: 100vh;
+
+  /* Creates visible space outside the bordered page */
+  padding: 3% 0;
+}
+
+/* ACTUAL WIKI PAGE */
+.page-container {
+  width: 74%;
+  max-width: 1500px;
+  min-height: 94vh;
+  margin: 0 auto;
+  padding: 2%;
+
+  background-color: #EADCB0;
+
+  /* Visible page boundary */
+  border: 2px solid #e5c976;
+  box-shadow: 0 10px 43px rgba(22, 42, 62, 0.28);
+}
+
+/* TITLE */
+.page-title {
+  margin: 0 0 2%;
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  color: #000;
+}
+
+/* LAYOUT */
+.page-layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2%;
+  width: 100%;
+}
+
+/* LEFT CONTENT */
+.main-content {
+  width: 74%;
+  min-width: 0;
+  font-size: clamp(1rem, 1.25vw, 1.3rem);
+  line-height: 1.6;
+}
+
+/* CONTENTS */
+.contents-box {
+  width: 36%;
+  margin-top: 3%;
+  padding: 1.5%;
+  background-color: #e6ceb3f9;
+  border: 1px solid #96521ee9;
+}
+
+.contents-title {
+  margin-bottom: 3%;
+  font-size: clamp(1.1rem, 1.4vw, 1.5rem);
+  font-weight: bold;
+}
+
+.contents-box ol {
+  margin: 0;
+  padding-left: 8%;
+}
+
+.contents-box li {
+  margin-bottom: 2%;
+}
+
+/* INFOBOX */
+.infobox {
+  width: 24%;
+  flex-shrink: 0;
+  background-color: #EADCB0;
+  border: 1px solid #6f5535;
+  font-size: clamp(0.85rem, 1vw, 1.05rem);
+}
+
+.infobox-header {
+  padding: 3%;
+  background-color: #ae4730;
+  color: white;
+  text-align: center;
+  font-size: clamp(1rem, 1.15vw, 1.2rem);
+  font-weight: bold;
+}
+
+.infobox img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* INFOBOX TABLE */
+.infobox table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.infobox-section th {
+  padding: 3%;
+  background-color: #EADCB0;
+  text-align: center !important;
+  font-weight: bold;
+}
+
+.infobox th {
+  width: 42%;
+  padding: 4%;
+  background-color: #dea964;
+  text-align: left;
+  vertical-align: top;
+}
+
+.infobox td {
+  padding: 4%;
+  vertical-align: top;
+}
+
+/* SECTION HEADINGS */
+.main-content h2 {
+  margin-top: 4%;
+  margin-bottom: 2%;
+  padding-bottom: 0.5%;
+  border-bottom: 1px solid #c3664f;
+  font-size: clamp(1.7rem, 2.2vw, 2.4rem);
+}
+
+.main-content h3 {
+  margin-top: 3%;
+  font-size: clamp(1.3rem, 1.7vw, 1.8rem);
+}
+
+/* QUOTE BOX */
+.quote-wiki {
+  position: relative;
+  width: 100%;
+  min-height: 11vw;
+  padding: 4% 5% 3%;
+  background-color: #e6ceb3f9;
+  border-left: 0.4vw solid #944123;
+  font-size: clamp(1rem, 1.2vw, 1.3rem);
+  font-style: italic;
+}
+
+/* OPENING QUOTE */
+.quote-wiki::before {
+  content: "“";
+  position: absolute;
+  top: -1%;
+  left: 1.5%;
+  font-family: serif;
+  font-size: clamp(4rem, 6vw, 6rem);
+  line-height: 1;
+  color: #2e2f31;
+}
+
+/* CLOSING QUOTE */
+.quote-wiki::after {
+  content: "”";
+  position: absolute;
+  top: -1%;
+  left: 14%;
+  font-family: serif;
+  font-size: clamp(4rem, 6vw, 6rem);
+  line-height: 1;
+  color: #242525;
+}
+
+.quote-source {
+  display: block;
+  margin-top: 2%;
+  font-size: clamp(0.8rem, 0.95vw, 1rem);
+  font-style: normal;
+  color: #54595d;
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+  .page-container {
+    width: 88%;
+  }
+
+  .main-content {
+    width: 70%;
+  }
+
+  .infobox {
+    width: 28%;
+  }
+
+  .contents-box {
+    width: 48%;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 750px) {
+  body {
+    background-attachment: scroll;
+  }
+
+  .page-bg {
+    padding: 3%;
+  }
+
+  .page-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 4%;
+  }
+
+  .page-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* INFOBOX APPEARS FIRST ON MOBILE */
+  .infobox {
+    order: 1;
+    width: 100%;
+  }
+
+  /* MAIN ARTICLE APPEARS AFTER INFOBOX */
+  .main-content {
+    order: 2;
+    width: 100%;
+  }
+
+  .contents-box {
+    width: 100%;
+  }
+
+  .quote-wiki {
+    min-height: auto;
+    padding: 3.5rem 1.5rem 1.5rem;
+    border-left-width: 5px;
+  }
+
+  .quote-wiki::before {
+    left: 1rem;
+  }
+
+  .quote-wiki::after {
+    left: 5.5rem;
+  }
+}
